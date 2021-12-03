@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPage</title>
+    <style>
+        @import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+        .link a{position: absolute;left: -95px;transition: 0.3s;padding: 15px;
+        width: 100px;text-decoration: none;font-size: 16px;color: white;border-radius: 0 15px 15px 0;}
+        .link a:hover{left: 0;}
+        .fa{margin-right: 8px;}
+
+        #home{top: 40px;background-color: #4CAF50;}
+        #about{top: 100px;background-color: #2196F3;}
+        #contact{top: 160px;background-color: #f44336;}
+        #logout{top: 220px;background-color: #555;}
+
+        img{height: 300px;width: 100%;}
+
+        body{background-color: rgb(46, 119, 138);}
+
+                /* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+  display: flex;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 80px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float:left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 79.9px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <img src="AdminPage.svg" alt="" title="Hospital Management System">
+
+    <div class="link">
+        <a href="H.M.S.html" id="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        <a href="AboutUs.html" id="about"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>About Us</a>
+        <a href="ContactUs.html" id="contact"><i class="fa fa-envelope" aria-hidden="true"></i>Contact Us</a>
+        <a href="AdminPanel.html" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a>
+    </div>
+
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Profile</button>
+            <div class="dropdown-content">
+                <a href="">Admin Profile</a>
+                <a href="">Add Admin</a>
+                <a href="">View Admins</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Doctor</button>
+            <div class="dropdown-content">
+                <a href="">Add Doctor</a>
+                <a href="">View Doctors</a>
+                <a href="">View Doctors timings</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Patient</button>
+            <div class="dropdown-content">
+                <a href="">Add Patient</a>
+                <a href="">View Patients</a>
+        </div>
+    </div>
+        <div class="dropdown">
+            <button class="dropbtn">Appointment</button>
+            <div class="dropdown-content">
+                <a href="">View Pending Appointments</a>
+                <a href="">View Approved Appointments</a>
+        </div>
+    </div>
+        <a href="">Test Result</a>
+        <div class="dropdown">
+            <button class="dropbtn">News</button>
+            <div class="dropdown-content">
+                <a href="">Add News</a>
+                <a href="">View News</a>
+        </div>
+    </div>
+        <div class="dropdown">
+            <button class="dropbtn">Setting</button>
+            <div class="dropdown-content">
+                <a href="">Add Department</a>
+                <a href="">View Departments</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

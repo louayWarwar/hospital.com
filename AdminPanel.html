@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPanel</title>
+    <style>
+        @import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+        body{background-color: rgb(33, 166, 219);background-image: url("admins.svg");
+        background-repeat: no-repeat;background-size: 60%;}
+        li{text-align: center;list-style-type: none;}
+        a{float: right;width: 5cm;text-decoration: none;color: black; font-size: large;
+                padding: 0.5cm 0.2cm;}
+        a:hover{font-style: italic;font-size: 25px;color: black;font-weight: bold;}
+        .Login-Box{width: 280px;position: absolute;left: 50%;transform: translate(-50%,-50%);}
+        .Login-Box h1{float: left;font-size: 40px;border-bottom: 6px solid;
+        margin-bottom: 50px;padding: 13px 0;}
+        .textbox{width: 100%;overflow: hidden;font-size: 20px;padding: 8px 0;
+        margin: 8px 0; border-bottom: 1px solid;}
+        .textbox i{width: 35px;float: left;text-align: center;}
+        .textbox input{border: none;outline: none;background: none;
+        color: black;font-size: 18px;width: 80%;float: left;margin: 10px;}
+        .btn{width: 100%;background: none;border: 2px solid;padding: 5px;
+        font-size: 18px;cursor: pointer;margin: 12px 0;}
+    </style>
+
+<script>
+    function fill(){
+        if(document.f1.n1.value=='' || document.f1.n2.value=='')
+        window.alert("please enter your email and password");
+        else if(document.f1.n1.value=='Louay Warwar' && document.f1.n2.value=='Louay123')
+        window.open("adminPage.html");
+        else if(document.f1.n1.value=='Bashir Sayour' && document.f1.n2.value=='Bashir123')
+        window.open("adminPage.html");
+        else
+        window.alert("Incorrect email or password");
+    }
+</script>
+</head>
+<body>
+    <ul>
+        <li><a href="H.M.S.html"><i class="fa fa-angle-double-left" aria-hidden="true"></i></i>Back</a></li>
+    </ul>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <form action="" name="f1">
+    <div class="Login-Box">
+        <h1>Login Admin</h1>
+        <div class="textbox">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+             <input type="text" placeholder="E-mail" required name="n1">
+        </div>
+
+        <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="password" placeholder="Password" required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, 
+            and at least 8 or more characters" name="n2">
+       </div>
+       <input class="btn" type="submit" value="Sign in" onclick="fill()">
+    </div>
+</form>
+</body>
+</html>

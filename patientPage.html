@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatientPage</title>
+    <style>
+        @import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+        .link a{position: absolute;left: -95px;transition: 0.3s;padding: 15px;
+        width: 100px;text-decoration: none;font-size: 16px;color: white;border-radius: 0 15px 15px 0;}
+        .link a:hover{left: 0;}
+        .fa{margin-right: 8px;}
+        .Date{border-radius:15px; width: 200px; height: 30px;}
+        .btn{width: 20%; height: 40px; margin-left: 17%;font-size: 25px;font-family:Constantia;}
+        textarea{width: 100%;}
+        #home{top: 80px;background-color: #4CAF50;}
+        #about{top: 140px;background-color: #2196F3;}
+        #contact{top: 200px;background-color: #f44336;}
+        #logout{top: 260px;background-color: #555;}
+        img{height: 300px;width: 95%;margin: 40px 40px 0 40px;}
+
+        .tablink {background-color: #555;color: white;float: left;border: none;
+        outline: none;cursor: pointer;padding: 14px 16px;font-size: 17px;width: 25%;}
+
+.tablink:hover {background-color: #777;}
+.tabcontent {color: white;display: none;padding: 100px 20px;height: 100%;}
+
+#Profile {background-color: #4CAF50}
+#AddAppointment {background-color: #2196F3;}
+#ViewAppointment {background-color: #f44336;}
+#TestResult {background-color: #777;}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 83%;
+  background: #f1f1f1;}
+
+form.example button {
+  float: left;
+  width: 15%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;}
+
+form.example button:hover {background: #0b7dda;}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;}
+
+  .radioDepartment{
+    float: left; 
+    width: 250px;
+    height: 250px;}
+  
+  .radioDoctors{
+    float: left; 
+    width: 250px;
+    height: 250px;}
+  
+  .radioDate{
+    float: left; 
+    width: 250px;
+    height: 250px;}
+  
+  .button{
+    width: 150px;
+    height: 30px;
+    clear: both;
+    border: none;
+    transition: .5s;
+    border-radius: 50%;
+  }
+
+  .button:hover{
+    background-color: #777;
+  }
+
+  h4{
+    color: black;
+  }
+
+  h5{
+    color: black;
+  }
+
+  #result{
+    color: white;
+  }
+    </style>
+</head>
+<body>
+    <img src="Logo.svg" alt="" title="Hospital Management System">
+    <div class="link">
+    <a href="H.M.S.html" id="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+    <a href="AboutUs.html" id="about"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>About Us</a>
+    <a href="ContactUs.html" id="contact"><i class="fa fa-envelope" aria-hidden="true"></i>Contact Us</a>
+    <a href="Sign_in and Sign-up.html" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a>
+    </div>
+    <button class="tablink" onclick="openPage('Profile', this, '#4CAF50')" id="defaultOpen">
+        <i class="fa fa-user" aria-hidden="true"></i>Profile</button>
+<button class="tablink" onclick="openPage('AddAppointment', this, '#2196F3')">
+    <i class="fa fa-plus" aria-hidden="true"></i>Add Appointment</button>
+<button class="tablink" onclick="openPage('ViewAppointment', this, '#f44336')">
+    <i class="fa fa-eye" aria-hidden="true"></i>View Appointment</button>
+<button class="tablink" onclick="openPage('TestResult', this, '#777')">
+    <i class="fa fa-file-text-o" aria-hidden="true"></i>Test Result</button>
+
+<div id="Profile" class="tabcontent">
+    <h3>Profile</h3>
+    <h4><b>Hello <span id="result"></span></b></h4>
+    <h5>Welcome to Our Online Hospital Management System. <br>
+As an institution medical care, We aspire to be the first choise <br>
+of people amoung hospitals, to be distinguished by achieving the <br>
+satisfacation of Our patients, and to provide the best possible <br>
+quality medically and serviceally, in addition to the best Doctors <br>
+Specialist and Employees. We seek to change medical services in <br>
+a way that positively impacts people's live.</h5>
+  </div>
+  
+  <div id="AddAppointment" class="tabcontent">
+    <form action="" name="f1">
+    <h3>Add Appointment</h3>
+    <p>Your Name <input type="text" name="yourName" disabled></p>
+
+    <br>
+    <div class="radioDepartment">
+    <p><b><u>Departments:</u></b></p>
+      <input type="radio" checked="checked" name="rbDepartment" value="Physician Doctor">Physician <br>
+      <input type="radio" name="rbDepartment" value="Children Doctor">Children Doctor <br>
+      <input type="radio" name="rbDepartment" value="General Medicine Doctor">General Medicine <br>
+      <input type="radio" name="rbDepartment" value="Sugary Doctor">Sugary <br>
+      <input type="radio" name="rbDepartment" value="Pharmacy Doctor">Pharmacy <br>
+      <input type="radio" name="rbDepartment" value="Docotr of Laboratory and Blood Bank">Laboratory and Blood Bank <br>
+      <input type="radio" name="rbDepartment" value="Physiotherapy Doctor">Physiotherapy <br>
+    </div>
+
+    <div class="radioDoctors">
+      
+      <p><b><u>Doctors:</u></b></p>
+      <input type="radio" checked="checked" name="rbDoctor" value="Nicolas Khoury">Nicolas Khoury <br>
+      <input type="radio" name="rbDoctor" value="Ali Mansour">Ali Mansour <br>
+      <input type="radio" name="rbDoctor" value="Mouhammad halabi">Mouhammad halabi <br>
+      <input type="radio" name="rbDoctor" value="Ahmad Sayour">Ahmad Sayour <br>
+      <input type="radio" name="rbDoctor" value="Elie Hanna">Elie Hanna <br>
+      <input type="radio" name="rbDoctor" value="Mounir Arab">Mounir Arab <br>
+      <input type="radio" name="rbDoctor" value="George Melhem">George Melhem <br>
+      </div>
+
+      <div class="radioDate">
+      
+        <p><b><u>Date:</u></b></p>
+        <input type="radio" checked="checked" name="rbDate" value="10/6/2021">10/6/2021</span> <br>
+        <input type="radio" name="rbDate" value="18/6/2021">18/6/2021 <br>
+        <input type="radio" name="rbDate" value="20/6/2021">20/6/2021 <br>
+        <input type="radio" name="rbDate" value="25/6/2021">25/6/2021 <br>
+        <input type="radio" name="rbDate" value="28/6/2021">28/6/2021 <br>
+        <input type="radio" name="rbDate" value="29/6/2021">29/6/2021 <br>
+        <input type="radio" name="rbDate" value="1/7/2021">1/7/2021 <br>
+        </div>
+
+        <div class="radioTime">
+      
+          <p><b><u>Time:</u></b></p>
+          <input type="radio" checked="checked" name="rbTime" value="8:00 AM">8:00 AM <br>
+          <input type="radio" name="rbTime" value="8:30 AM">8:30 AM <br>
+          <input type="radio" name="rbTime" value="9:00 AM">9:00 AM <br>
+          <input type="radio" name="rbTime" value="9:30 AM">9:30 AM <br>
+          <input type="radio" name="rbTime" value="10:00 AM">10:00 AM <br>
+          <input type="radio" name="rbTime" value="10:30 AM">10:30 AM <br>
+          <input type="radio" name="rbTime" value="11:00 AM">11:00 AM <br>
+          </div>
+          <br><br><br>
+          <input type="submit" value="Submit" class="button" onclick="addAppointment()">
+      </div>
+  </form>
+  </div>
+  
+  <div id="ViewAppointment" class="tabcontent">
+    <h3>View Appointment</h3>
+    <p id="viewApp"></p>
+  </div>
+  
+  <div id="TestResult" class="tabcontent">
+    <h3>Test Result</h3>
+    <div>
+        <textarea name="" id="" cols="30" rows="50" readonly ></textarea>
+    </div>
+  </div>
+  <div id="News" class="tabcontent">
+      <h3>News</h3>
+      <form class="example" action="action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+  </div>
+
+<script>
+    function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+
+document.getElementById("result").innerHTML=localStorage.getItem("textValue");
+document.f1.yourName.value=localStorage.getItem("textValue");
+
+function addAppointment(){
+  var message="Hello "+document.f1.yourName.value+";\n\nYou took an appointment with Doctor "+document.f1.rbDoctor.value+", On "+document.f1.rbDate.value+", At "+document.f1.rbTime.value+", He/She is a "+document.f1.rbDepartment.value+";\n\nthank you";
+  window.alert(message);
+}
+</script>
+</body>
+</html>
